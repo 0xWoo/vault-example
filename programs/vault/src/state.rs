@@ -20,7 +20,7 @@ pub struct Vault {
     pub total_amount: u64,
 
     /// total users staked
-    pub total_deposits: u32,
+    pub total_users: u32,
 }
 
 impl Vault {

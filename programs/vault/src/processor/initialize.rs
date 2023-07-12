@@ -9,7 +9,7 @@ pub fn process_initialize(ctx: Context<Initialize>) -> Result<()> {
         token_decimals: ctx.accounts.token_mint.decimals,
         authority_bump: *ctx.bumps.get("vault_authority").unwrap(),
         total_amount: 0,
-        total_deposits: 0,
+        total_users: 0,
     });
     Ok(())
 }

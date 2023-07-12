@@ -11,7 +11,7 @@ pub fn process_deposit(ctx: Context<Deposit>, amount: u64) -> Result<()> {
             amount: 0,
         });
         // assume there will be stakers less than 2^32 for now
-        ctx.accounts.vault.total_deposits += 1;
+        ctx.accounts.vault.total_users += 1;
     } else {
         assert_eq!(ctx.accounts.user.vault, ctx.accounts.vault.key());
         assert_eq!(ctx.accounts.user.owner, ctx.accounts.owner.key());
