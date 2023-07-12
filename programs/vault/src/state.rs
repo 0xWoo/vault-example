@@ -62,5 +62,5 @@ pub struct User {
 
 impl User {
     pub const PREFIX: &'static [u8] = b"User";
-    pub const LEN: usize = 80; //8 + 32 + 32 + 8;
+    pub const LEN: usize = 81; //8 + 32 + 32 + 1 + 8;
 }
