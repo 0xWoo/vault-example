@@ -16,10 +16,12 @@ pub mod vault {
         process_initialize(ctx)
     }
 
+    #[access_control(Deposit::validate(&ctx))]
     pub fn deposit(ctx: Context<Deposit>, amount: u64) -> Result<()> {
         process_deposit(ctx, amount)
     }
 
+    #[access_control(Withdraw::validate(&ctx, amount))]
     pub fn withdraw(ctx: Context<Withdraw>, amount: u64) -> Result<()> {
         process_withdraw(ctx, amount)
     }
