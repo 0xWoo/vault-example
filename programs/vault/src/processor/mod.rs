@@ -6,3 +6,6 @@ pub use deposit::*;
 
 pub mod withdraw;
 pub use withdraw::*;
+
+pub mod compound;
+pub use compound::*;

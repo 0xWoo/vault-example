@@ -25,4 +25,9 @@ pub mod vault {
     pub fn withdraw(ctx: Context<Withdraw>, amount: u64) -> Result<()> {
         process_withdraw(ctx, amount)
     }
+
+    #[access_control(Compound::validate(&ctx))]
+    pub fn compound(ctx: Context<Compound>, interest_rate_bps: u16) -> Result<()> {
+        process_compound(ctx, interest_rate_bps)
+    }
 }
